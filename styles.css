@@ -1,109 +1,123 @@
-/* Global Styles */
-* {
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Body and Background */
-body {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
+.page {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   flex-direction: column;
-}
-
-/* Header Section */
-header {
-  margin-bottom: 30px;
-}
-
-header .logo {
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-header h1 {
-  font-size: 3rem;
-  color: #ffcc00;
-}
-
-header .tagline {
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: lighter;
-}
-
-/* Main Section (Introduction) */
-main {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
   padding: 20px;
 }
 
-#intro p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #bbb;
+.hidden {
+  display: none;
 }
 
-.pulse-btn {
-  background-color: #ffcc00;
-  color: #222;
-  border: none;
+/* Home Page Styles */
+#home-page .logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+#home-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#home-page p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#explore-button {
   padding: 15px 30px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 10px;
   animation: pulsate 2s infinite;
 }
 
-/* Pulsing Animation */
 @keyframes pulsate {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-/* Footer Section */
-footer {
-  position: absolute;
-  bottom: 20px;
-  font-size: 0.8rem;
-  color: #fff;
+/* Timeline Page Styles */
+#timeline-page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-footer a {
-  color: #ffcc00;
-  text-decoration: none;
+#back-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#timeline {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.timeline-event {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.timeline-event h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.timeline-event p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.timeline-event img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  header h1 {
+  #home-page h1 {
     font-size: 2rem;
   }
 
-  #intro p {
-    font-size: 1.2rem;
+  #home-page p {
+    font-size: 1rem;
   }
 
-  .pulse-btn {
-    font-size: 1.2rem;
-    padding: 12px 24px;
+  #explore-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  #timeline-page h1 {
+    font-size: 1.5rem;
   }
 }

@@ -3,32 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ancient One</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <img src="one.jpg" alt="Ancient One Logo" class="logo">
-    <h1>Ancient One</h1>
-    <p class="tagline">A Journey Through Time</p>
-  </header>
+  <!-- Home Page -->
+  <div id="home-page" class="page">
+    <header>
+      <img src="logo.jpg" alt="Ancient One Logo" class="logo">
+    </header>
+    <main>
+      <h1>Welcome to Ancient One</h1>
+      <p>Explore the journey of humanity from 4000 BCE to infinity.</p>
+      <button id="explore-button" class="pulsate">Tap to Explore</button>
+    </main>
+    <footer>
+      <p>Designed by Kofi Fosu</p>
+      <p>Contact: <a href="mailto:cosmoscoderr@gmail.com">cosmoscoderr@gmail.com</a></p>
+    </footer>
+  </div>
 
-  <!-- Main Content Section (Introduction + Button) -->
-  <main>
-    <section id="intro">
-      <p>Explore over 6,000 years of history, from Creation to today, and dive into future predictions. Experience time like never before, from the rise of civilizations to the future we are building today.</p>
-      <button id="tapToExplore" class="pulse-btn">Tap to Explore</button>
-    </section>
-  </main>
+  <!-- Timeline Page -->
+  <div id="timeline-page" class="page hidden">
+    <header>
+      <h1>Timeline of Humanity</h1>
+      <button id="back-button">Back to Home</button>
+    </header>
+    <main>
+      <div id="timeline">
+        <!-- Timeline events will be dynamically inserted here -->
+      </div>
+    </main>
+  </div>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>Designed by <strong>Kofi Fosu</strong></p>
-    <p>Contact: <a href="mailto:cosmoscoderr@gmail.com">cosmoscoderr@gmail.com</a></p>
-  </footer>
-
-  <script src="app.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

@@ -8,24 +8,34 @@ const timeline = document.getElementById('timeline');
 // Sample Timeline Data (Replace with dynamic data from back-end)
 const timelineData = [
   {
-    title: "Creation (4000 BCE)",
-    description: "The beginning of time according to ancient texts.",
-    image: "creation.jpg"
+    section: "Prehistoric Times",
+    events: [
+      {
+        title: "Creation (4000 BCE)",
+        description: "The beginning of time according to ancient texts.",
+        image: "creation.jpg"
+      }
+    ]
   },
   {
-    title: "Birth of Christ (1 CE)",
-    description: "The start of the Common Era.",
-    image: "christ.jpg"
+    section: "Ancient Civilizations",
+    events: [
+      {
+        title: "Birth of Christ (1 CE)",
+        description: "The start of the Common Era.",
+        image: "christ.jpg"
+      }
+    ]
   },
   {
-    title: "Fall of Rome (476 CE)",
-    description: "The fall of the Western Roman Empire.",
-    image: "rome.jpg"
-  },
-  {
-    title: "Future Prediction (2050 CE)",
-    description: "Renewable energy dominates global power production.",
-    image: "future.jpg"
+    section: "Future Predictions",
+    events: [
+      {
+        title: "Renewable Energy Dominance (2050 CE)",
+        description: "Renewable energy dominates global power production.",
+        image: "future.jpg"
+      }
+    ]
   }
 ];
 
@@ -44,14 +54,20 @@ backButton.addEventListener('click', () => {
 // Render Timeline
 function renderTimeline() {
   timeline.innerHTML = '';
-  timelineData.forEach(event => {
-    const eventElement = document.createElement('div');
-    eventElement.classList.add('timeline-event');
-    eventElement.innerHTML = `
-      <h2>${event.title}</h2>
-      <p>${event.description}</p>
-      <img src="${event.image}" alt="${event.title}">
-    `;
-    timeline.appendChild(eventElement);
+  timelineData.forEach(section => {
+    const sectionElement = document.createElement('div');
+    sectionElement.classList.add('timeline-section');
+    sectionElement.innerHTML = `<h2>${section.section}</h2>`;
+    section.events.forEach(event => {
+      const eventElement = document.createElement('div');
+      eventElement.classList.add('timeline-event');
+      eventElement.innerHTML = `
+        <h3>${event.title}</h3>
+        <p>${event.description}</p>
+        <img src="${event.image}" alt="${event.title}">
+      `;
+      sectionElement.appendChild(eventElement);
+    });
+    timeline.appendChild(sectionElement);
   });
 }

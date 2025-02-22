@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f4f4f4;
+ color: #333;
+}
+
+.page {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ text-align: center;
+ padding: 20px;
+}
+
+.hidden {
+ display: none;
+}
+
+/* Home Page Styles */
+.intro-section {
+ max-width: 600px;
+}
+
+.logo {
+ width: 100px;
+ height: auto;
+ margin-bottom: 20px;
+}
+
+h1 {
+ font-size: 2.5rem;
+ margin-bottom: 10px;
+}
+
+p {
+ font-size: 1.2rem;
+ margin-bottom: 20px;
+}
+
+footer {
+ margin-top: 20px;
+ font-size: 0.9rem;
+ color: #777;
+}
+
+/* Pulsating Button */
+.pulsating-button {
+ padding: 15px 30px;
+ font-size: 1.2rem;
+ color: #fff;
+ background-color: #007bff;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+ 0% {
+   transform: scale(1);
+ }
+ 50% {
+   transform: scale(1.1);
+ }
+ 100% {
+   transform: scale(1);
+ }
+}
+
+/* Timeline Page Styles */
+.timeline {
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+.event {
+ background-color: #fff;
+ padding: 20px;
+ margin: 10px 0;
+ border-radius: 5px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+ margin-top: 20px;
+ padding: 10px 20px;
+ font-size: 1rem;
+ color: #fff;
+ background-color: #333;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
